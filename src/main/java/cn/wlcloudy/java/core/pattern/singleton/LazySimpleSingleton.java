@@ -16,4 +16,10 @@ public class LazySimpleSingleton {
         }
         return lazy;
     }
+
+    public synchronized static LazySimpleSingleton getInstanceSyn(){
+        if (null == lazy)
+            lazy = new LazySimpleSingleton();
+        return lazy;
+    }
 }

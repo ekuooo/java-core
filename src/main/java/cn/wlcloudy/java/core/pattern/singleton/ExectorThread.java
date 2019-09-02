@@ -5,7 +5,8 @@ package cn.wlcloudy.java.core.pattern.singleton;
  */
 public class ExectorThread implements Runnable{
     public void run() {
-        LazySimpleSingleton lazySimpleSingleton = LazySimpleSingleton.getInstance();
+//        LazySimpleSingleton lazySimpleSingleton = LazySimpleSingleton.getInstance();
+        LazySimpleSingleton lazySimpleSingleton = LazySimpleSingleton.getInstanceSyn();
         System.out.println(Thread.currentThread().getName() + ":" + lazySimpleSingleton);
     }
 }
